@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gowtham - Developer Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="left">Gowtham's Portfolio</div>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="firstSection">
+      <div class="leftSection">
+        Hi, My name is <span class="purple">Gowtham Nukala</span>
+        <div>and I am a passionate</div>
+        <span id="element"></span>
+        <div class="buttons">
+          <a href="GowthamNukala.pdf" class="btn" download aria-label="Download Resume">Download Resume</a>
+          <a href="https://github.com/GowthamNukala" class="btn" target="_blank" aria-label="Visit GitHub">Visit GitHub</a>
+        </div>
+      </div>
+      <div class="rightSection">
+        <img src="/images/img1.png" alt="Gowtham's Photo">
+      </div>
+    </section>
+    <hr>
+    <section class="secondSection">
+      <span class="text-gray">What I have done so far</span>
+      <h1>Work Experience</h1>
+      <div class="box">
+        <div class="vertical">
+          <img src="/images/img2.png" alt="Work Icon">
+          <div>
+            <strong>Web Developer Intern</strong><br>
+            Iven Tech Solution (May 2024 - Present)<br>
+            <ul>
+              <li>Designed and implemented responsive web pages using HTML, CSS, and JavaScript, ensuring cross-browser compatibility.</li>
+              <li>Collaborated with team members to understand project requirements and deliver tasks within deadlines.</li>
+              <li>Worked under the guidance of senior developers to optimize website functionality and improve user experience.</li>
+              <li>Reduced website load time by 20% through code optimization.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div>Gowtham's Developer Portfolio</div>
+      <div>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>&copy; 2024 Gowtham'sPortfolio.com | All rights reserved</div>
+  </footer>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Software Developer'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+</html>
