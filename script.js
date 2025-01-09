@@ -1,10 +1,13 @@
 // Typed.js Initialization
-var typed = new Typed('#element', {
-  strings: ['Web Developer', 'Software Developer'],
-  typeSpeed: 50,
-  backSpeed: 30,
-  loop: true,
-});
+document.addEventListener('DOMContentLoaded', function () {
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Software Developer', 'Tech Enthusiast'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  });
+  
 
 // Highlight Navigation on Scroll
 const navLinks = document.querySelectorAll('nav ul li a');
