@@ -1,13 +1,12 @@
 // Typed.js Initialization
 document.addEventListener('DOMContentLoaded', function () {
-    var typed = new Typed('#element', {
-      strings: ['Web Developer', 'Software Developer', 'Tech Enthusiast'],
-      typeSpeed: 50,
-      backSpeed: 30,
-      loop: true
-    });
+  var typed = new Typed('#element', {
+    strings: ['Web Developer', 'Software Developer'],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
   });
-  
+});
 
 // Highlight Navigation on Scroll
 const navLinks = document.querySelectorAll('nav ul li a');
@@ -16,28 +15,29 @@ const sections = document.querySelectorAll('main section');
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(section => {
-      const sectionTop = section.offsetTop - 50; // Adjust for header height
-      const sectionHeight = section.offsetHeight;
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          current = section.getAttribute('id');
-      }
+    const sectionTop = section.offsetTop - 50; // Adjust for header height
+    const sectionHeight = section.offsetHeight;
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute('id');
+    }
   });
+
   navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-      }
+    link.classList.remove('active');
+    if (link.getAttribute('href').includes(current)) {
+      link.classList.add('active');
+    }
   });
 });
 
 // Scroll Animations using Intersection Observer
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-      if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-      } else {
-          entry.target.classList.remove('fade-in');
-      }
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    } else {
+      entry.target.classList.remove('fade-in');
+    }
   });
 }, { threshold: 0.1 });
 
@@ -55,11 +55,7 @@ backToTop.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-      backToTop.style.display = 'block';
-  } else {
-      backToTop.style.display = 'none';
-  }
+  backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
 });
 
 // Filter Projects
@@ -68,13 +64,9 @@ const projects = document.querySelectorAll('.project');
 
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
-      const category = button.getAttribute('data-category');
-      projects.forEach(project => {
-          if (project.classList.contains(category) || category === 'all') {
-              project.style.display = 'block';
-          } else {
-              project.style.display = 'none';
-          }
-      });
+    const category = button.getAttribute('data-category');
+    projects.forEach(project => {
+      project.style.display = (category === 'all' || project.classList.contains(category)) ? 'block' : 'none';
+    });
   });
 });
